@@ -135,7 +135,7 @@ model.add(tf.keras.layers.Dense(15, activation='relu'))
 model.add(tf.keras.layers.Dense(NUM_GESTURES, activation='softmax')) # softmax is used, because we only expect one gesture to occur per input
 model.compile(optimizer='rmsprop', loss='mse', metrics=['mae'])
 
-history = model.fit(inputs_train, outputs_train, epochs=200, batch_size=1, validation_data=(inputs_validate, outputs_validate))
+history = model.fit(inputs_train, outputs_train, epochs=600, batch_size=1, validation_data=(inputs_validate, outputs_validate))
 
 # increase the size of the graphs. The default size is (6,4).
 #plt.rcParams["figure.figsize"] = (20,10)
